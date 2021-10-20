@@ -1,0 +1,67 @@
+.CourierNew {
+  font-size: 12px;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  font-family: "Courier New", Courier, monospace;
+  color: #000000;
+}
+
+.imprimir {
+  color: #fff;
+  background-color: #000000;
+  border-color: #46b8da;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  font-family: Verdana, Geneva, sans-serif;
+  padding-left: 4px;
+}
+
+.imprimir2 {
+  color: #fff;
+  background-color: #999999;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  font-family: Verdana, Geneva, sans-serif;
+  padding-left: 4px;
+  border: 1px solid #606060;
+}
+
+.tablaborder {
+  width: 100%;
+}
+
+
+.bordesdiv {
+  background-color: #fff;
+  border: 1px solid #000000;
+
+}
+ legend{
+  font-size: calc(1.2rem);
+ }
+
+
+/* girar el text a 90° */
+
+.rotate90g {
+
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+
+  /* IE */
+  -ms-transform: rotate(-90deg);
+
+  /* Opera */
+  -o-transform: rotate(-90deg);
+  padding: 0px;
+
+}

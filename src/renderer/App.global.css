@@ -1,0 +1,121 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "./view/components/absoluteLoading/loading.css";
+@import "./view/components/fua/fua.css";
+
+body {
+  height: 100vh;
+  overflow-y: hidden;
+  margin: 20px 20px 0 20px;
+  background-image: url('https://codervent.com/mons/dashtrans/demo/vertical/assets/images/bg-themes/2.png');
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.table-container{
+  height: calc(92vh - 0px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  background-color: rgb(0 0 0 / 15%);
+  background-clip: border-box;
+  border: 0 solid transparent;
+  border-radius: .25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.3rem 0.8rem rgb(0 0 0 / 12%);
+}
+
+.table-container::-webkit-scrollbar {
+  width: 0.4em;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: #212529;
+  border-radius: 50px;
+}
+.sidebar {
+  padding-top: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgb(0 0 0 / 15%);
+  background-clip: border-box;
+  border: 0 solid transparent;
+  border-radius: .25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.3rem 0.8rem rgb(0 0 0 / 12%);
+}
+
+.nav-link {
+  display: block;
+  padding: .5rem 1rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+.nav-link:focus, .nav-link:hover {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.upload-photo {
+  text-align: center;
+  margin: 5px;
+  background-color: #ffffff;
+  color: rgb(0 0 0);
+  border-radius: 20px;
+  line-height: 15px;
+  border: 1px solid rgb(146 182 255);
+  transition: all 0.3s ease 0s;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12),
+  0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+  transition: transform ease-in 0.1s;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.upload-photo:hover{
+  background-color: #809ba6;
+  color: white;
+}
+
+#upload-file {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+/* custom class bootstrap */
+.nav-link {
+  display: block;
+  padding: .5rem 1rem;
+  color: #ffffff;
+}
+.nav-link:focus, .nav-link:hover {
+  font-weight: bold;
+}
+.table{
+  color: #ffffff;
+}
+.table-hover>tbody>tr:hover>* {
+  --bs-table-accent-bg: var(--bs-table-hover-bg);
+  color: #ffffff;
+  background-color: #212529;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+  --bs-table-accent-bg: var(--bs-table-striped-bg);
+  color: #d5d5d5;
+}
+
+thead tr:nth-child(1) th{
+  background: #6b8994;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
