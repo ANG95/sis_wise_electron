@@ -54,8 +54,8 @@ const MysqlExample = () => {
     const firstDay = startOfWeek(curr, { weekStartsOn: 1 });
     const lastDay = endOfWeek(curr, { weekStartsOn: 1 });
 
-    const initialDate = `${format(firstDay, 'yyyy-MM-dd hh:mm:ss')}`;
-    const endDate = `${format(lastDay, 'yyyy-MM-dd hh:mm:ss')}`;
+    const initialDate = `${format(firstDay, 'yyyy-MM-dd HH:mm:ss')}`;
+    const endDate = `${format(lastDay, 'yyyy-MM-dd HH:mm:ss')}`;
     const setValues = {
       of: format(firstDay, 'yyyy-MM-dd'),
       to: format(lastDay, 'yyyy-MM-dd'),
