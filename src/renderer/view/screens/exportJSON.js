@@ -15,6 +15,20 @@ export default function ExportJSON() {
     setLoading(true);
     try {
       const attentions = await ExampleController.get(initialDate, endDate);
+      attentions.forEach((a) => {
+        a.ate_FecAlta = `${format(a.ate_FecAlta, 'yyyy-MM-dd HH:mm:ss')}`;
+        a.ate_FecCrea = `${format(a.ate_FecCrea, 'yyyy-MM-dd HH:mm:ss')}`;
+        a.ate_FecAte = `${format(a.ate_FecAte, 'yyyy-MM-dd HH:mm:ss')}`;
+        a.ate_FecIng = `${format(a.ate_FecIng, 'yyyy-MM-dd HH:mm:ss')}`;
+        a.ate_FecNac = `${format(a.ate_FecNac, 'yyyy-MM-dd HH:mm:ss')}`;
+        a.ate_FecParto = a.ate_FecParto
+          ? `${format(a.ate_FecParto, 'yyyy-MM-dd HH:mm:ss')}`
+          : null;
+        a.ate_FecTrans = a.ate_FecTrans
+          ? `${format(a.ate_FecTrans, 'yyyy-MM-dd HH:mm:ss')}`
+          : null;
+      });
+      console.log('attentions ', attentions);
       setDataFuas(attentions);
     } catch (error) {
       console.log(error);
