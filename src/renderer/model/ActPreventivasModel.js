@@ -1,10 +1,10 @@
 const DBcon = require('../helpers/dbConnection');
 
 module.exports = {
-  get: (of, to) => {
+  actPreventives: (idAttention) => {
     return new Promise((resolve, reject) => {
       DBcon.query(
-        `SELECT *  FROM i_atencion WHERE ate_FecCrea BETWEEN '${of}' AND '${to}' LIMIT 2`,
+        `SELECT *  FROM i_atesmi WHERE asm_IdAtencion = ${idAttention}`,
         (err, results) => {
           if (err) return reject(err);
           return resolve(results);

@@ -12,6 +12,7 @@ export default function ExportJSON() {
   const [loading, setLoading] = useState(false);
 
   const handleExportJSON = async (initialDate, endDate) => {
+    console.log('fechas', initialDate, endDate);
     setLoading(true);
     try {
       const attentions = await ExampleController.get(initialDate, endDate);
